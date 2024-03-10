@@ -1,0 +1,43 @@
+{
+  "name": "mailgun-validate-email-tool",
+  "version": "1.0.0",
+  "description": "validate email addresses with mailgun API",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "node ./node_modules/.bin/lab -r tap tests/*-test.js | ./node_modules/.bin/tap-spec",
+    "test-cov": "node ./node_modules/.bin/lab -t 75 tests/*-test.js",
+    "test-cov-html": "node ./node_modules/.bin/lab -r html -o coverage.html tests/*-test.js"
+  },
+  "pre-commit": [
+    "lint",
+    "test",
+    "test-cov"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resiship/mailgun-validate-email-tool.git"
+  },
+  "keywords": [
+    "mailgun",
+    "email",
+    "validate",
+    "address",
+    "spam",
+    "scam",
+    "valid"
+  ],
+  "author": "resiship",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.25.0"
+  },
+  "devDependencies": {
+    "code": "^1.2.1",
+    "jscs": "^1.7.3",
+    "jshint": "^2.5.10",
+    "lab": "^5.0.3",
+    "pre-commit": "^1.1.2",
+    "tap-spec": "^2.1.0"
+  }
+}
